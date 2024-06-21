@@ -1,1 +1,9 @@
 # HOSTEL_MANAGEMENT_SYSTEM
+///////////////////Login Credentials///////////////////////////
+
+URL: http://localhost/hostel-management-system/index.php
+
+Username: admin
+Password: AdminHMS@123#$
+
+////////////////////////END/////////////////////////////////////////
