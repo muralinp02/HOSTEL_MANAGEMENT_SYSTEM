@@ -1,0 +1,349 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root{
+  --header-height: 3rem;
+  --nav-width: 68px;
+
+  /*===== Colors =====*/
+  --first-color: #4723D9;
+  --first-color-light: #AFA5D9;
+  --white-color: #F7F6FB;
+  
+  /*===== Font and typography =====*/
+  --body-font: 'Nunito', sans-serif;
+  --normal-font-size: 1rem;
+  
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+/*===== BASE =====*/
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+body{
+  position: relative;
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1rem;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: .5s;
+}
+
+a{
+  text-decoration: none;
+}
+
+/*===== HEADER =====*/
+.header{
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background-color: var(--white-color);
+  z-index: var(--z-fixed);
+  transition: .5s;
+}
+
+.header__toggle{
+  color: var(--first-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.header__img{
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.header__img img{
+  width: 40px;
+}
+
+/*===== NAV =====*/
+.l-navbar{
+  position: fixed;
+  top: 0;
+  left: -30%;
+  width: var(--nav-width);
+  height: 100vh;
+  background-color: var(--first-color);
+  padding: .5rem 1rem 0 0;
+  transition: .5s;
+  z-index: var(--z-fixed);
+}
+
+.nav{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.nav__logo, .nav__link{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 1rem;
+  padding: .5rem 0 .5rem 1.5rem;
+}
+
+.nav__logo{
+  margin-bottom: 2rem;
+}
+
+.nav__logo-icon{
+  font-size: 1.25rem;
+  color: var(--white-color);
+}
+
+.nav__logo-name{
+  color: var(--white-color);
+  font-weight: 700;
+}
+
+.nav__link{
+  position: relative;
+  color: var(--first-color-light);
+  margin-bottom: 1.5rem;
+  transition: .3s;
+}
+
+.nav__link:hover{
+  color: var(--white-color);
+}
+
+.nav__icon{
+  font-size: 1.25rem;
+}
+
+/*Show navbar movil*/
+.show{
+  left: 0;
+}
+
+/*Add padding body movil*/
+.body-pd{
+  padding-left: calc(var(--nav-width) + 1rem);
+}
+
+/*Active links*/
+.active{
+  color: var(--white-color);
+}
+
+.active::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 32px;
+  background-color: var(--white-color);
+}
+
+/* ===== MEDIA QUERIES=====*/
+@media screen and (min-width: 768px){
+  body{
+    margin: calc(var(--header-height) + 1rem) 0 0 0;
+    padding-left: calc(var(--nav-width) + 2rem);
+  }
+
+  .header{
+    height: calc(var(--header-height) + 1rem);
+    padding: 0 2rem 0 calc(var(--nav-width) + 2rem);
+  }
+
+  .header__img{
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__img img{
+    width: 45px;
+  }
+
+  .l-navbar{
+    left: 0;
+    padding: 1rem 1rem 0 0;
+  }
+
+  /*Show navbar desktop*/
+  .showa{
+    width: calc(var(--nav-width) + 158px);
+  }
+
+  /*Add padding body desktop*/
+  .body-pd{
+    padding-left: calc(var(--nav-width) + 188px);
+  }
+}
+
+
+/*-----------------
+  9. Dashboard
+-----------------------*/
+
+.dash-widget {
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+.dash-widget-bg1 {
+  width: 65px;
+  float: left;
+  color: #fff;
+  display: block;
+  font-size: 50px;
+  text-align: center;
+  line-height: 65px;
+  background: #009efb;
+  border-radius: 50%;
+  font-size: 40px;
+  height: 65px;
+}
+.dash-widget-bg2 {
+  width: 65px;
+  float: left;
+  color: #fff;
+  display: block;
+  font-size: 50px;
+  text-align: center;
+  line-height: 65px;
+  background: #55ce63;
+  border-radius: 50%;
+  font-size: 40px;
+  height: 65px;
+}
+.dash-widget-bg3 {
+  width: 65px;
+  float: left;
+  color: #fff;
+  display: block;
+  font-size: 50px;
+  text-align: center;
+  line-height: 65px;
+  background: #7a92a3;
+  border-radius: 50%;
+  font-size: 40px;
+  height: 65px;
+}
+.dash-widget-bg4 {
+  width: 65px;
+  float: left;
+  color: #fff;
+  display: block;
+  font-size: 50px;
+  text-align: center;
+  line-height: 65px;
+  background: #ffbc35;
+  border-radius: 50%;
+  font-size: 40px;
+  height: 65px;
+}
+
+  
+  /*-----------------
+  7. Content
+-----------------------*/
+
+.page-wrapper {
+  left: 0;
+/*  margin-left: 230px;*/
+  padding-top: 50px;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.dash-widget-info > h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.dash-widget-info span i {
+  width: 16px;
+  background: #fff;
+  border-radius: 50%;
+  color: #666666;
+  font-size: 9px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  margin-left: 5px;
+}
+.dash-widget-info > span.widget-title1 {
+  background: #009efb;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.dash-widget-info > span.widget-title2 {
+  background: #55ce63;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.dash-widget-info > span.widget-title3 {
+  background: #7a92a3;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.dash-widget-info > span.widget-title4 {
+  background: #ffbc35;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.bar-chart > .legend > .item.text-right:before {
+  right: 0;
+  left: auto;
+}
+.dash-widget-info > span.widget-title1 {
+  background: #009efb;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.dash-widget-info > span.widget-title2 {
+  background: #55ce63;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.dash-widget-info > span.widget-title3 {
+  background: #7a92a3;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.dash-widget-info > span.widget-title4 {
+  background: #ffbc35;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+}
